@@ -1,1 +1,1 @@
-# ACSG-542TimeManagmentProject
+# ACSG-542TimeManagementProject
