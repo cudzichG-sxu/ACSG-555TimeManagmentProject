@@ -12,29 +12,32 @@ var timerModel = mongoose.model('timerModel', timerSchema);
 
 const history = require('connect-history-api-fallback');
 
+
+
 mongoose.connection.once('open', function() {
     app.use(express.json());
-    app.post('/newProjectItem', function(request, res) {
+
+    app.post('/newProjectItem', function(request, response) {
         var savePkg = request;
         console.log(savePkg.body.projectName);
-        if (savePkg.body.projectName === undefined) {
+       if (savePkg.body.projectName === undefined) {
             console.log("THE DATA IS EMPTY!");
-        } else {
+      } else {
             var newProject = new projectModel({
                 name: savePkg.body.projectName,
             });
-            newProject.save(function (err, doc) {
+           newProject.save(function (err, doc) {
                 if (err) {
                     console.log("error saving to database " + err);
-                    res.status(404);
-                    res.send(JSON.stringify(err));
+                    response.status(404);
+                    response.send(JSON.stringify(err));
                 } else {
                     console.log("saved successfully to database " + doc);
-                    res.status(200);
-                    res.send(JSON.stringify(doc));
+                  response.status(200);
+                    response.send(JSON.stringify(doc));
                 }
-            });
-        }
+          });
+       }
     });
 
     app.get('/allProjects', function (req, res) {

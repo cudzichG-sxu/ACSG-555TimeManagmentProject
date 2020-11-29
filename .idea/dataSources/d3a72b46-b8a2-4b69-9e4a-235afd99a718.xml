@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="projects@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.19">
+    <root id="1">
+      <ServerVersion>4.4.0</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="local"/>
+    <schema id="5" parent="1" name="myDB"/>
+    <schema id="6" parent="1" name="projects">
+      <Current>1</Current>
+    </schema>
+    <schema id="7" parent="1" name="random"/>
+    <schema id="8" parent="1" name="week-5-db"/>
+    <schema id="9" parent="1" name="week-7-db"/>
+    <table id="10" parent="6" name="projects"/>
+    <table id="11" parent="6" name="tasks"/>
+  </database-model>
+</dataSource>
