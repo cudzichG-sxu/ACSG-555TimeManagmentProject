@@ -1,0 +1,19 @@
+<div>
+  <input [(ngModel)]="newProjectItem"  >
+  <button  (click)=" saveProjectItem()" class="btn-primary">Add Project</button>
+</div>
+<div  class = card-body>
+   <table class ="table table-hover">
+    <thead>
+      <th>Project Name</th>
+      <th>ID</th>
+    </thead>
+    <tbody>
+    <tr *ngFor=" let project of projects; let itemIndex = index">
+      <td><a (click)="viewProjectTasks(project)" routerLinkActive="active">{{project.name}}</a></td>
+      <td>{{project._id}}</td>
+      <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteProjectItem(project._id, itemIndex)">Delete</button>
+    </tbody>
+  </table>
+</div>
+
