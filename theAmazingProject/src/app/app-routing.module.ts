@@ -7,7 +7,6 @@ import { HttpClientModule} from '@angular/common/http';
 const routes: Routes = [
   {path: 'project-root', component: ProjectRootComponent},
   {path: 'task-root', component: TaskRootComponent}
-
 ];
 
 @NgModule({
