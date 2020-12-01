@@ -19,4 +19,8 @@ export class ProjectServiceService {
   create(newProjectItem): Observable<any> {
     return this.http.post<any>(`${environment.apiUrl}/newProjectItem`, {name: newProjectItem});
   }
+
+  delete( projectToBeDeleted ): Observable<any> {
+    return this.http.delete<any>(`${environment.apiUrl}/deleteProject/?id=${projectToBeDeleted}`, {});
+  }
 }
