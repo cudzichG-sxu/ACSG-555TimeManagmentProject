@@ -1,10 +1,11 @@
+
 <div class='card-header'>
     <h1 class='main2'>{{projectName}}</h1>
     <label for ='Task' >
       <h3 class='main1'>Enter task for this project: </h3>
     </label>
-    <input class='main1' type='text'id='Task' placeholder='Enter new task' [(ngModel)]="newTaskItem" >
-    <button type='button' class='btn-primary' (click)="saveTaskItem()"> Save </button>
+    <input class='main1' type='text'id='Task' placeholder='Enter new task' [(ngModel)]="newTaskItem" (keyup.enter)="saveTaskItem()">
+    <input type="button" class='main3' value ='Save' (click)="saveTaskItem()" >
 </div>
 <div  class = 'card-body'>
   <table class ='table table-hover'>
@@ -20,12 +21,11 @@
       <td>{{task.projectId}}</td>
       <td></td>
       <td>
-        <button type='button' class='btn btn-success btn-sm active'>Start Timer</button>
-        <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteTask(task._id, itemIndex)">Delete</button>
+        <input type='button' value = 'start' class='main3' >
+        <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
       </td>
     </tbody>
   </table>
 </div>
-
 
 

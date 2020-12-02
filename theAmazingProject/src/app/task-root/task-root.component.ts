@@ -14,6 +14,7 @@ export class TaskRootComponent implements OnInit {
   public newTaskItem;
   public returnedTasks;
 
+
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskServiceService
   ) {
