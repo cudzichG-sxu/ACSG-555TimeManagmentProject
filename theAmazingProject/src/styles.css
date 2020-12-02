@@ -7,3 +7,21 @@
   color: royalblue;
   outline-color: black;
 }
+.main3{
+  margin-left: 5px;
+  background-color: blue;
+  color: antiquewhite;
+  width: 60px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.main4{
+  margin-left: 5px;
+  background-color: red;
+  color: antiquewhite;
+  width: 60px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 10px;
+}
