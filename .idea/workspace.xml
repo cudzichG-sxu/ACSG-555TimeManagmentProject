@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/project-root/project-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/project-root/project-root.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/styles.css" afterDir="false" />
-    </list>
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +27,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1kvd62OQCaUNFQvC4AA0ci7ngSC" />
   <component name="ProjectViewState">
@@ -79,7 +73,7 @@
       <workItem from="1606852938265" duration="44000" />
       <workItem from="1606853063629" duration="1013000" />
       <workItem from="1606854559514" duration="762000" />
-      <workItem from="1606855798314" duration="8572000" />
+      <workItem from="1606855798314" duration="8865000" />
     </task>
     <task id="LOCAL-00001" summary="Hi Guys- I made updates to the home page banner">
       <created>1606591370741</created>
