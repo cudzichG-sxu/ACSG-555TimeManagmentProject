@@ -28,6 +28,8 @@ export class ProjectRootComponent implements OnInit {
   viewProjectTasks(selectedProject): void {
     this.dataPkg.projectId = selectedProject._id;
     this.dataPkg.projectName = selectedProject.name;
+    sessionStorage.setItem('currentProjectId', selectedProject._id);
+    sessionStorage.setItem('currentProjectName', selectedProject.name);
     this.route.navigate(['task-root']);
   }
   saveProjectItem(): void {
