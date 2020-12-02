@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress" />
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/project-root/project-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/project-root/project-root.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FULL STACK DEV/week11" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,6 +78,7 @@
       <workItem from="1606853063629" duration="1013000" />
       <workItem from="1606854559514" duration="762000" />
       <workItem from="1606855798314" duration="8865000" />
+      <workItem from="1606871347464" duration="7516000" />
     </task>
     <task id="LOCAL-00001" summary="Hi Guys- I made updates to the home page banner">
       <created>1606591370741</created>
