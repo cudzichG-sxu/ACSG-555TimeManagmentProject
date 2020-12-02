@@ -41,8 +41,8 @@ mongoose.connection.once('open', function() {
     });
 
     app.get('/allProjects', function (req, res) {
-        var query = projectModel.find()
-        query.exec(function(err, docs) {
+        var projectQuery = projectModel.find()
+        projectQuery.exec(function(err, docs) {
             if(err) {
                 console.log("error pulling from database " + err);
                 res.status(404);
@@ -69,7 +69,8 @@ mongoose.connection.once('open', function() {
             }
         })
     });
-    //This is a work in progress, need to pass project ID to data save
+
+
     app.use(express.json());
     app.post('/newTaskItem', function(request, response) {
         var savePkg = request;
@@ -80,7 +81,7 @@ mongoose.connection.once('open', function() {
             var newTask = new taskModel({
                 name: savePkg.body.name,
                 totalTime: 0.00,
-                projectId: ''
+                projectId: savePkg.body.projectId
             });
             newTask.save(function (err, doc) {
                 if (err) {
@@ -94,6 +95,38 @@ mongoose.connection.once('open', function() {
                 }
             });
         }
+    });
+
+    app.get('/allTaskItems', function (req, res) {
+        var projectIdActual = req.query.projectId;
+        console.log("HERE IS THE PROJECT ID " + projectIdActual);
+        var taskQuery = taskModel.find({ projectId: { $eq: projectIdActual } })
+        taskQuery.exec(function(err, docs) {
+            if(err) {
+                console.log("error pulling from database " + err);
+                res.status(404);
+                res.send(JSON.stringify(err));
+            } else {
+                res.status(200);
+                res.send(JSON.stringify(docs));
+            }
+        });
+    });
+
+    app.use('/deleteTask', express.query());
+    app.delete('/deleteTask', function(request, response) {
+        var deletePkg = taskModel.deleteOne({_id: request.query.id});
+        console.log(request.query);
+        deletePkg.exec(function(err) {
+            if(err) {
+                console.log("error deleting from database" + err);
+                response.status(404);
+                response.send(JSON.stringify(err));
+            } else {
+                response.status(202);
+                response.send(JSON.stringify({}));
+            }
+        })
     });
 
 
