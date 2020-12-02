@@ -19,9 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete.">
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I moved Alfredo's app component style rules from the style tag into the app component style sheet, and started work on my task component.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_7_02_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_1_2020_7_02_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

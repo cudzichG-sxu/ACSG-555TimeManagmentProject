@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataHandlerService} from '../data-handler.service';
 import {TaskServiceService} from '../task-service.service';
+import {SimpleTimer} from 'ng2-simple-timer';
 
 @Component({
   selector: 'app-task-root',
@@ -13,9 +14,14 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
+  public timerText = 'Start Timer';
+  public counter = 0;
+  public st;
+  public timerId;
 
   constructor(private dataPkg: DataHandlerService,
-              private taskService: TaskServiceService
+              private taskService: TaskServiceService,
+              private simpleTimer: SimpleTimer
   ) {
 
   }
@@ -26,6 +32,7 @@ export class TaskRootComponent implements OnInit {
     this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
       this.returnedTasks = returnedTasks;
     });
+    this.st = this.simpleTimer.newTimer('1sec', 1, true);
   }
 
   saveTaskItem(): void {
@@ -45,5 +52,16 @@ export class TaskRootComponent implements OnInit {
         this.returnedTasks.splice(index, 1);
       }
     });
+  }
+
+  timer(): void {
+    if (this.timerText === 'Start Timer') {
+      this.timerText = 'Stop Timer';
+      this.timerId = this.simpleTimer.subscribe('1sec', () => this.counter++);
+    }
+    else {
+      this.timerText = 'Start Timer';
+      this.simpleTimer.unsubscribe(this.timerId);
+    }
   }
 }

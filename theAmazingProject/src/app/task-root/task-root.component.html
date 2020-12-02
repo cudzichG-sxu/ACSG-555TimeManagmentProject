@@ -6,6 +6,10 @@
     <input class='main1' type='text'id='Task' placeholder='Enter new task' [(ngModel)]="newTaskItem" >
     <button type='button' class='btn-primary' (click)="saveTaskItem()"> Save </button>
 </div>
+
+<button type='button' class='btn btn-success btn-sm active' (click)="timer()">{{timerText}}</button>
+<p>{{counter}}</p>
+
 <div  class = 'card-body'>
   <table class ='table table-hover'>
     <thead>
@@ -20,7 +24,7 @@
       <td>{{task.projectId}}</td>
       <td></td>
       <td>
-        <button type='button' class='btn btn-success btn-sm active'>Start Timer</button>
+        <button type='button' class='btn btn-success btn-sm active' (click)="timer()">{{timerText}}</button>
         <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteTask(task._id, itemIndex)">Delete</button>
       </td>
     </tbody>
