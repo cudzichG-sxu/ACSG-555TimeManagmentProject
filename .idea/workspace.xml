@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I moved Alfredo's app component style rules from the style tag into the app component style sheet, and started work on my task component." />
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1kvd62OQCaUNFQvC4AA0ci7ngSC" />
   <component name="ProjectViewState">
@@ -22,8 +40,9 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FULL STACK DEV/week11" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -31,7 +50,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\ryo36\Desktop\Angular Stuff\ACSG-542TimeManagmentProject\theAmazingProject\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\fredy\Documents\GitHub\theAmazingProject\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -53,8 +72,12 @@
       <option name="presentableId" value="Default" />
       <updated>1606584821032</updated>
       <workItem from="1606584823304" duration="2653000" />
-      <workItem from="1606588227214" duration="15514000" />
-      <workItem from="1606707155187" duration="968000" />
+      <workItem from="1606588227214" duration="15992000" />
+      <workItem from="1606852938265" duration="44000" />
+      <workItem from="1606853063629" duration="1013000" />
+      <workItem from="1606854559514" duration="762000" />
+      <workItem from="1606855798314" duration="8865000" />
+      <workItem from="1606871347464" duration="8552000" />
     </task>
     <task id="LOCAL-00001" summary="Hi Guys- I made updates to the home page banner">
       <created>1606591370741</created>
@@ -63,7 +86,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606591370741</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress">
+      <created>1606634000733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606634000733</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete.">
+      <created>1606879093974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606879093974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,44 +120,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hi Guys- I made updates to the home page banner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hi Guys- I made updates to the home page banner" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="524" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606629142796">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="524" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1606629142796" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606633352048">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606633352048" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1606874935684">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606874935684" />
-    <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1606874935683">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606874935683" />
-    <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1606874935682">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606874935682" />
-    <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1606874935684">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606874935684" />
-    <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606591512646">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606591512646" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606620093826">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606620093826" />
+    <MESSAGE value="Hi Guys- I started working on the project component. Trying to wrap my head around the server routing. Work in progress" />
+    <MESSAGE value="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete." />
+    <option name="LAST_COMMIT_MESSAGE" value="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete." />
   </component>
 </project>
