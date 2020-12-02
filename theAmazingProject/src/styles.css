@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+.main1{
+  margin-left: 5px;
+  color: black;
+}
+.main2{
+  margin-left: 250px;
+  color: royalblue;
+  outline-color: black;
+}

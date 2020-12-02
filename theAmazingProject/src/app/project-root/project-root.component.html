@@ -1,18 +1,25 @@
 <div>
-  <input [(ngModel)]="newProjectItem"  >
-  <button  (click)=" saveProjectItem()" class="btn-primary">Add Project</button>
+    <label for="new project">
+      <h3>Enter New Project </h3>
+    </label>
+    <input class="main1" id= "new project" placeholder="New Proj" [(ngModel)]="newProjectItem"  >
+      <button  (click)=" saveProjectItem()" class="main1" type="button">Add Project</button>
 </div>
+
 <div  class = card-body>
    <table class ="table table-hover">
     <thead>
       <th>Project Name</th>
       <th>ID</th>
+      <th>Operational Command</th>
     </thead>
     <tbody>
     <tr *ngFor=" let project of projects; let itemIndex = index" (click)="viewProjectTasks(project)" routerLinkActive="active">
       <td>{{project.name}}</td>
       <td>{{project._id}}</td>
-      <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteProjectItem(project._id, itemIndex)">Delete</button>
+      <td>
+        <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteProjectItem(project._id, itemIndex); $event.stopPropagation()">Delete</button>
+      </td>
     </tbody>
   </table>
 </div>
