@@ -1,31 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi Guys- I made updates to the home page banner">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I moved Alfredo's app component style rules from the style tag into the app component style sheet, and started work on my task component." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,25 +94,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606633352048" />
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1606707279900">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1606874935684">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606707279900" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606874935684" />
     <state width="746" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1606707279900">
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1606874935683">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606707279900" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606874935683" />
     <state width="746" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1606707279900">
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1606874935682">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606707279900" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606874935682" />
     <state width="746" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1606707279900">
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1606874935684">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606707279900" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606874935684" />
     <state width="746" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606633564626" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606591512646">
       <screen x="0" y="0" width="1536" height="824" />
