@@ -11,7 +11,7 @@ var taskSchema = new Schema({
 }, {collection: 'tasks'});
 
 var timerSchema = new Schema({
-    date: {type: Date, required: true},
+    startSeconds: {type: Number, required: true},
     taskId: {type: String, required: true},
 }, {collection: 'timers'});
 

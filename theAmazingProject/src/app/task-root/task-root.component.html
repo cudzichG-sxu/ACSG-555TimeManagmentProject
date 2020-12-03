@@ -21,7 +21,8 @@
       <td>{{task.projectId}}</td>
       <td></td>
       <td>
-        <input type='button' value = 'start' class='main3' >
+        <input type='button' value = 'start' class='main3' (click)="startTimer(task._id)">
+        <input type='button' value = 'stop' class='main4' (click)="stopTimer(task._id)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
       </td>
     </tbody>
