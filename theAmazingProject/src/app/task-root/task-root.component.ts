@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataHandlerService} from '../data-handler.service';
 import {TaskServiceService} from '../task-service.service';
+import {TimerServiceService} from '../timer-service.service';
 
 @Component({
   selector: 'app-task-root',
@@ -16,7 +17,8 @@ export class TaskRootComponent implements OnInit {
 
 
   constructor(private dataPkg: DataHandlerService,
-              private taskService: TaskServiceService
+              private taskService: TaskServiceService,
+              private timerService: TimerServiceService
   ) {
 
   }
@@ -46,5 +48,12 @@ export class TaskRootComponent implements OnInit {
         this.returnedTasks.splice(index, 1);
       }
     });
+  }
+
+  startTimer(taskIdActual): void {
+    this.timerService.startTimer(taskIdActual);
+  }
+  stopTimer(taskIdActual): void {
+    this.timerService.stopTimer(taskIdActual);
   }
 }
