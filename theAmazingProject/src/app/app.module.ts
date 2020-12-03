@@ -7,7 +7,6 @@ import { ProjectRootComponent } from './project-root/project-root.component';
 import { TaskRootComponent } from './task-root/task-root.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
-import {SimpleTimer} from 'ng2-simple-timer';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import {SimpleTimer} from 'ng2-simple-timer';
     NgbModule,
     FormsModule
   ],
-  providers: [SimpleTimer],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

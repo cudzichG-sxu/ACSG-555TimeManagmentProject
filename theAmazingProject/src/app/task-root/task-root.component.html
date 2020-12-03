@@ -7,9 +7,6 @@
     <button type='button' class='btn-primary' (click)="saveTaskItem()"> Save </button>
 </div>
 
-<button type='button' class='btn btn-success btn-sm active' (click)="timer()">{{timerText}}</button>
-<p>{{counter}}</p>
-
 <div  class = 'card-body'>
   <table class ='table table-hover'>
     <thead>
@@ -22,9 +19,9 @@
     <tr *ngFor=" let task of returnedTasks; let itemIndex = index" >
       <td>{{task.name}}</td>
       <td>{{task.projectId}}</td>
-      <td></td>
+      <td>{{task.totalTime}}</td>
       <td>
-        <button type='button' class='btn btn-success btn-sm active' (click)="timer()">{{timerText}}</button>
+        <button type='button' class='btn btn-success btn-sm active'>placeholder</button>
         <button type='button' class='btn btn-danger btn-sm delete' (click)="deleteTask(task._id, itemIndex)">Delete</button>
       </td>
     </tbody>
