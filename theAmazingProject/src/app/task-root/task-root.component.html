@@ -1,6 +1,6 @@
 
 <div class='card-header'>
-    <h1 class='main2'>{{projectName}}</h1>
+    <h1 class='main2'style="text-transform: uppercase" >{{projectName}}</h1>
     <label for ='Task' >
       <h3 class='main1'>Enter task for this project: </h3>
     </label>
@@ -17,10 +17,11 @@
     </thead>
     <tbody>
     <tr *ngFor=" let task of returnedTasks; let itemIndex = index" >
-      <td>{{task.name}}</td>
+      <td >{{task.name}}</td>
       <td>{{task.projectId}}</td>
-      <td></td>
+      <td>{{msg}}</td>
       <td>
+        <input type="button" [value] ="oneClick? 'Start' : 'Stop'" [class]="oneClick? 'main3' : 'main4'"  (click)="updateBtn()">
         <input type='button' value = 'start' class='main3' (click)="startTimer(task._id)">
         <input type='button' value = 'stop' class='main4' (click)="stopTimer(task._id)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
@@ -28,5 +29,8 @@
     </tbody>
   </table>
 </div>
+
+{{count}}
+
 
 

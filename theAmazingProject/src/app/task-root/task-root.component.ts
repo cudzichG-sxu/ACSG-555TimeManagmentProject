@@ -3,6 +3,7 @@ import {DataHandlerService} from '../data-handler.service';
 import {TaskServiceService} from '../task-service.service';
 import {TimerServiceService} from '../timer-service.service';
 
+
 @Component({
   selector: 'app-task-root',
   templateUrl: './task-root.component.html',
@@ -14,13 +15,15 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
+  public oneClick = true;
+  count = 0;
+  msg; string = [];
 
 
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskServiceService,
-              private timerService: TimerServiceService
+              private timerService: TimerServiceService,
   ) {
-
   }
 
   ngOnInit(): void {
@@ -51,9 +54,24 @@ export class TaskRootComponent implements OnInit {
   }
 
   startTimer(taskIdActual): void {
-    this.timerService.startTimer(taskIdActual);
+    if (this.count % 2 === 1) {
+      this.timerService.startTimer(taskIdActual);
+    }
   }
+
   stopTimer(taskIdActual): void {
-    this.timerService.stopTimer(taskIdActual);
+    if (this.count % 2 === 0) {
+      this.timerService.stopTimer(taskIdActual);
+    }
+  }
+
+  updateBtn(): void {
+    this.count++;
+    if (this.count % 2 === 1) {
+      this.msg = 'Timer is running';
+    }else{
+      this.msg = 'Actual Time Recorded';
+    }
+    this.oneClick = !this.oneClick;
   }
 }

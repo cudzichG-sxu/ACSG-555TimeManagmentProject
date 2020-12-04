@@ -3,7 +3,8 @@
   color: black;
 }
 .main2{
-  margin-left: 350px;
+  position: center;
+  text-align: center;
   color: royalblue;
   outline-color: black;
 }
