@@ -1,25 +1,15 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {environment} from '../environments/environment';
-import {HttpClient} from '@angular/common/http';
-import {Socket} from 'ngx-socket-io';
-
+import { Injectable } from '@angular/core';
+import { Socket } from 'ngx-socket-io';
 @Injectable({
   providedIn: 'root'
 })
 export class TimerServiceService {
 
-  constructor(private http: HttpClient,
-              private socket: Socket
-  ) {}
-
+  constructor(private timerSocket: Socket) { }
   startTimer(taskId): void {
-    this.socket.emit('start', taskId);
+    this.timerSocket.emit('start-timer', {timerStarted: true, taskIdActual: taskId});
   }
-
   stopTimer(taskId): void {
-    this.socket.emit('start', taskId);
+    this.timerSocket.emit('start-timer', {timerStarted: false, taskIdActual: taskId});
   }
-
-
 }

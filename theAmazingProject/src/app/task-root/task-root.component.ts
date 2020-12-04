@@ -15,6 +15,7 @@ export class TaskRootComponent implements OnInit {
   public newTaskItem;
   public returnedTasks;
 
+
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskServiceService,
               private timerService: TimerServiceService
@@ -47,5 +48,12 @@ export class TaskRootComponent implements OnInit {
         this.returnedTasks.splice(index, 1);
       }
     });
+  }
+
+  startTimer(taskIdActual): void {
+    this.timerService.startTimer(taskIdActual);
+  }
+  stopTimer(taskIdActual): void {
+    this.timerService.stopTimer(taskIdActual);
   }
 }

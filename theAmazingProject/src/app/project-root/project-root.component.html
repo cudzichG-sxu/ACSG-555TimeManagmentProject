@@ -2,8 +2,8 @@
     <label for="new project">
       <h3>Enter New Project </h3>
     </label>
-    <input class="main1" id= "new project" placeholder="New Proj" [(ngModel)]="newProjectItem"  >
-      <button  (click)=" saveProjectItem()" class="main1" type="button">Add Project</button>
+    <input class="main1" id= "new project" placeholder="New Proj" [(ngModel)]="newProjectItem" (keyup.enter)="saveProjectItem()">
+      <button  (click)=" saveProjectItem()"  class="main1" type="button">Add Project</button>
 </div>
 
 <div  class = card-body>
