@@ -26,12 +26,10 @@
     "ng2-simple-timer": "^9.1.0",
     "ngx-socket-io": "^3.2.0",
     "rxjs": "~6.6.0",
-    "socket.io": "^3.0.3",
+    "socket.io": "^2.3.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2",
-    "ngx-socket-io": "^3.2.0",
-    "socket.io-client": "^2.3.0",
-    "socket.io": "^2.3.0"
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1001.7",
