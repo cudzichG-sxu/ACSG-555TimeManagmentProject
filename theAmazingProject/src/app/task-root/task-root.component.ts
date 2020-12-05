@@ -40,6 +40,8 @@ export class TaskRootComponent implements OnInit {
   saveTaskItem(): void {
     this.taskService.createTask(this.newTaskItem, this.projectId).subscribe(savedTaskItem => {
       this.returnedTasks.push(savedTaskItem);
+      this.changeBackground.push('main3');
+      this.changeText.push('Start');
       // clears out text field on page for cleaner UI
       this.newTaskItem = '';
     });
