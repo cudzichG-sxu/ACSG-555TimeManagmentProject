@@ -4,6 +4,7 @@ import {TaskServiceService} from '../task-service.service';
 import {TimerServiceService} from '../timer-service.service';
 
 
+
 @Component({
   selector: 'app-task-root',
   templateUrl: './task-root.component.html',
@@ -62,10 +63,12 @@ export class TaskRootComponent implements OnInit {
       this.msg = 'Timer is running';
     }else{
       this.timerService.stopTimer(taskIdActual);
-      this.msg = 'Actual Time Recorded';
+      this.msg = 'Timer Stopped';
+      this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
+        this.returnedTasks = returnedTasks;
+      });
     }
   }
-
   // tslint:disable-next-line:typedef
   buttonIsClickedChangeBackground(index) {
     if (this.changeBackground[index] === 'main3') {

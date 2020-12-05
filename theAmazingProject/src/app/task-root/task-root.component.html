@@ -21,7 +21,7 @@
       <td>{{task.projectId}}</td>
       <td>{{secondsToHms(task.totalTime)}}</td>
       <td>
-        <input type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="updateBtn(task._id);buttonIsClickedChangeBackground(itemIndex);buttonIsClickedChangeText(itemIndex)">
+        <input [routerLink]= "'task-root'"  type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="updateBtn(task._id);buttonIsClickedChangeBackground(itemIndex);buttonIsClickedChangeText(itemIndex)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
       </td>
     </tbody>
