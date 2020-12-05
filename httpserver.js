@@ -159,6 +159,15 @@ mongoose.connection.once('open', function() {
                             } else {
                                 console.log("successfully updated task in database");
                                 console.dir(docs);
+                                var deleteTimerPkg = timerModel.deleteOne({ taskId: { $eq: timerData.taskIdActual } });
+                                deleteTimerPkg.exec(function(err) {
+                                    if(err) {
+                                        console.log("error deleting from database" + err);
+                                    } else {
+                                        console.log("successfully deleted task in database");
+
+                                    }
+                                })
                             }
                         })
                     }
