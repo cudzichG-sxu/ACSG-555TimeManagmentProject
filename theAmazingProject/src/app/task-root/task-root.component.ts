@@ -17,8 +17,8 @@ export class TaskRootComponent implements OnInit {
   public returnedTasks;
   count = 0;
   msg;
-  changeBackground = [];
-  changeText = [];
+  changeBackground = ['main3'];
+  changeText = ['Start'];
 
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskServiceService,
@@ -74,7 +74,6 @@ export class TaskRootComponent implements OnInit {
       this.changeBackground[index] = 'main3';
     }
   }
-
   // tslint:disable-next-line:typedef
   buttonIsClickedChangeText(index) {
     if (this.changeText[index] === 'Start') {
