@@ -15,10 +15,10 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
-  public oneClick = true;
   count = 0;
-  msg; string = [];
-
+  msg;
+  changeBackground = [];
+  changeText = [];
 
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskServiceService,
@@ -31,6 +31,8 @@ export class TaskRootComponent implements OnInit {
     this.projectId = sessionStorage.getItem('currentProjectId');
     this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
       this.returnedTasks = returnedTasks;
+      returnedTasks.forEach(x => this.changeBackground.push('main3'));
+      returnedTasks.forEach(x => this.changeText.push('Start'));
     });
   }
 
@@ -53,25 +55,40 @@ export class TaskRootComponent implements OnInit {
     });
   }
 
-  startTimer(taskIdActual): void {
-    if (this.count % 2 === 1) {
-      this.timerService.startTimer(taskIdActual);
-    }
-  }
-
-  stopTimer(taskIdActual): void {
-    if (this.count % 2 === 0) {
-      this.timerService.stopTimer(taskIdActual);
-    }
-  }
-
-  updateBtn(): void {
+  updateBtn(taskIdActual): void {
     this.count++;
     if (this.count % 2 === 1) {
+      this.timerService.startTimer(taskIdActual);
       this.msg = 'Timer is running';
     }else{
+      this.timerService.stopTimer(taskIdActual);
       this.msg = 'Actual Time Recorded';
     }
-    this.oneClick = !this.oneClick;
+  }
+
+  // tslint:disable-next-line:typedef
+  buttonIsClickedChangeBackground(index) {
+    if (this.changeBackground[index] === 'main3') {
+      this.changeBackground[index] = 'main4';
+    } else {
+      this.changeBackground[index] = 'main3';
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  buttonIsClickedChangeText(index) {
+    if (this.changeText[index] === 'Start') {
+      this.changeText[index] = 'Stop';
+    } else {
+      this.changeText[index] = 'Start';
+    }
+  }
+  // tslint:disable-next-line:typedef
+  secondsToHms(totalSeconds) {
+    totalSeconds = Number(totalSeconds);
+    let h = Math.floor(totalSeconds / 3600);
+    let m = Math.floor(totalSeconds % 3600 / 60);
+    let s = Math.floor(totalSeconds % 3600 % 60);
+    return ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2);
   }
 }
