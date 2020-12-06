@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I made a few more updates in the html.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I made a few more updates in the html." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
