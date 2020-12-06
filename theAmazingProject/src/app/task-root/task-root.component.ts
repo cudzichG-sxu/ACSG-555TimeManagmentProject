@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {DataHandlerService} from '../data-handler.service';
-import {TaskServiceService} from '../task-service.service';
-import {TimerServiceService} from '../timer-service.service';
+import {DataHandlerService} from '../_services/data-handler.service';
+import {TaskItemService} from '../_services/taskItem.service';
+import {TimerActualService} from '../_services/timerActual.service';
 
 
 
@@ -16,14 +16,12 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
-  count = 0;
-  msg;
-  changeBackground = ['main3'];
-  changeText = ['Start'];
+  changeBackground = [];
+  changeText = [];
 
   constructor(private dataPkg: DataHandlerService,
-              private taskService: TaskServiceService,
-              private timerService: TimerServiceService,
+              private taskService: TaskItemService,
+              private timerService: TimerActualService,
   ) {
   }
 
@@ -54,31 +52,26 @@ export class TaskRootComponent implements OnInit {
       // tslint:disable-next-line:triple-equals
       if (index != -1) {
         this.returnedTasks.splice(index, 1);
+        this.changeBackground.splice(index, 1);
+        this.changeText.splice(index, 1);
       }
     });
   }
 
-  updateBtn(taskIdActual): void {
-    this.count++;
-    if (this.count % 2 === 1) {
+  // tslint:disable-next-line:typedef
+  buttonIsClickedChangeBackground(index, taskIdActual) {
+    if (this.changeBackground[index] === 'main3') {
       this.timerService.startTimer(taskIdActual);
-      this.msg = 'Timer is running';
-    }else{
+      this.changeBackground[index] = 'main4';
+    } else {
       this.timerService.stopTimer(taskIdActual);
-      this.msg = 'Timer Stopped';
       this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
         this.returnedTasks = returnedTasks;
       });
-    }
-  }
-  // tslint:disable-next-line:typedef
-  buttonIsClickedChangeBackground(index) {
-    if (this.changeBackground[index] === 'main3') {
-      this.changeBackground[index] = 'main4';
-    } else {
       this.changeBackground[index] = 'main3';
     }
   }
+
   // tslint:disable-next-line:typedef
   buttonIsClickedChangeText(index) {
     if (this.changeText[index] === 'Start') {
@@ -87,6 +80,7 @@ export class TaskRootComponent implements OnInit {
       this.changeText[index] = 'Start';
     }
   }
+
   // tslint:disable-next-line:typedef
   secondsToHms(totalSeconds) {
     totalSeconds = Number(totalSeconds);
