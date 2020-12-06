@@ -3,7 +3,7 @@ import { Socket } from 'ngx-socket-io';
 @Injectable({
   providedIn: 'root'
 })
-export class TimerServiceService {
+export class TimerActualService {
 
   constructor(private timerSocket: Socket) { }
   startTimer(taskId): void {

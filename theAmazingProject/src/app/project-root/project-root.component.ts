@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectServiceService } from '../project-service.service';
+import { ProjectItemService } from '../_services/projectItem.service';
 import { Router } from '@angular/router';
-import {DataHandlerService} from '../data-handler.service';
+import {DataHandlerService} from '../_services/data-handler.service';
 
 @Component({
   selector: 'app-project-root',
@@ -13,7 +13,7 @@ export class ProjectRootComponent implements OnInit {
   public projects;
 
   constructor(
-    private projectServiceService: ProjectServiceService,
+    private projectServiceService: ProjectItemService,
     private route: Router,
     private dataPkg: DataHandlerService
   ) { }

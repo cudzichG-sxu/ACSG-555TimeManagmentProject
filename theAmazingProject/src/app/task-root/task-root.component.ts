@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {DataHandlerService} from '../data-handler.service';
-import {TaskServiceService} from '../task-service.service';
-import {TimerServiceService} from '../timer-service.service';
-import {SimpleTimer} from 'ng2-simple-timer';
+import {DataHandlerService} from '../_services/data-handler.service';
+import {TaskItemService} from '../_services/taskItem.service';
+import {TimerActualService} from '../_services/timerActual.service';
+
+
 
 @Component({
   selector: 'app-task-root',
@@ -15,17 +16,13 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
-
-  public realTimeCounter = 0; //could also get totalTaskTime from backend
-  private timerId; //used for timer subscribing and unsubscribing (starting and stopping)
-
+  changeBackground = [];
+  changeText = [];
 
   constructor(private dataPkg: DataHandlerService,
-              private taskService: TaskServiceService,
-              private timerService: TimerServiceService,
-              private simpleTimer: SimpleTimer
+              private taskService: TaskItemService,
+              private timerService: TimerActualService,
   ) {
-
   }
 
   ngOnInit(): void {
@@ -33,13 +30,16 @@ export class TaskRootComponent implements OnInit {
     this.projectId = sessionStorage.getItem('currentProjectId');
     this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
       this.returnedTasks = returnedTasks;
+      returnedTasks.forEach(x => this.changeBackground.push('main3'));
+      returnedTasks.forEach(x => this.changeText.push('Start'));
     });
-    this.createTimer();
   }
 
   saveTaskItem(): void {
     this.taskService.createTask(this.newTaskItem, this.projectId).subscribe(savedTaskItem => {
       this.returnedTasks.push(savedTaskItem);
+      this.changeBackground.push('main3');
+      this.changeText.push('Start');
       // clears out text field on page for cleaner UI
       this.newTaskItem = '';
     });
@@ -52,21 +52,41 @@ export class TaskRootComponent implements OnInit {
       // tslint:disable-next-line:triple-equals
       if (index != -1) {
         this.returnedTasks.splice(index, 1);
+        this.changeBackground.splice(index, 1);
+        this.changeText.splice(index, 1);
       }
     });
   }
 
-  startTimer(taskIdActual): void {
-    this.timerService.startTimer(taskIdActual);
-    this.timerId = this.simpleTimer.subscribe('1sec', () => this.realTimeCounter++);
-  }
-  stopTimer(taskIdActual): void {
-    this.timerService.stopTimer(taskIdActual);
-    this.simpleTimer.unsubscribe(this.timerId);
+  // tslint:disable-next-line:typedef
+  buttonIsClickedChangeBackground(index, taskIdActual) {
+    if (this.changeBackground[index] === 'main3') {
+      this.timerService.startTimer(taskIdActual);
+      this.changeBackground[index] = 'main4';
+    } else {
+      this.timerService.stopTimer(taskIdActual);
+      this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
+        this.returnedTasks = returnedTasks;
+      });
+      this.changeBackground[index] = 'main3';
+    }
   }
 
-  createTimer(): void {
-    this.simpleTimer.newTimer('1sec', 1, true);
+  // tslint:disable-next-line:typedef
+  buttonIsClickedChangeText(index) {
+    if (this.changeText[index] === 'Start') {
+      this.changeText[index] = 'Stop';
+    } else {
+      this.changeText[index] = 'Start';
+    }
   }
 
+  // tslint:disable-next-line:typedef
+  secondsToHms(totalSeconds) {
+    totalSeconds = Number(totalSeconds);
+    let h = Math.floor(totalSeconds / 3600);
+    let m = Math.floor(totalSeconds % 3600 / 60);
+    let s = Math.floor(totalSeconds % 3600 % 60);
+    return ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2);
+  }
 }

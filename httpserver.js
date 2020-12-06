@@ -152,13 +152,22 @@ mongoose.connection.once('open', function() {
                     } else {
                         var storedSeconds = docs.startSeconds;
                         var secondsCalculation = dateInSeconds - storedSeconds;
-                        var updateTaskTimePkg = taskModel.updateOne({_id: timerData.taskIdActual}, {$set: {totalTime: secondsCalculation}});
+                        var updateTaskTimePkg = taskModel.update({_id: timerData.taskIdActual}, {$inc: {totalTime: secondsCalculation}});
                         updateTaskTimePkg.exec(function(err, docs) {
                             if(err) {
                                 console.log("error updating task from database" + err);
                             } else {
                                 console.log("successfully updated task in database");
                                 console.dir(docs);
+                                var deleteTimerPkg = timerModel.deleteOne({ taskId: { $eq: timerData.taskIdActual } });
+                                deleteTimerPkg.exec(function(err) {
+                                    if(err) {
+                                        console.log("error deleting from database" + err);
+                                    } else {
+                                        console.log("successfully deleted task in database");
+
+                                    }
+                                })
                             }
                         })
                     }

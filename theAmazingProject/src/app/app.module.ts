@@ -10,13 +10,17 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { FormsModule } from '@angular/forms';
 import {SimpleTimer} from 'ng2-simple-timer';
 
+
+
+
+
 const config: SocketIoConfig = { url: 'http://localhost:8001', options: {} };
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectRootComponent,
-    TaskRootComponent
+    TaskRootComponent,
   ],
   imports: [
     BrowserModule,
