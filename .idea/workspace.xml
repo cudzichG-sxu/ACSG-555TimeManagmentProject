@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi- I opened the project up to mess around with it a bit this morning. I embedded the get all tasks function into the updateBtn function and it seems to be refreshing the page when you stop the timer. It's not elegant, but appears to be working. Will update to my branch in github shortly...&#10;&#10;Fredy">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_28_2020_12_07_PM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,5 +165,23 @@
     <MESSAGE value="Guys- I added a function to toggle the button between start and stop. I think it is working properly. I would ask that you double check the code." />
     <MESSAGE value="Hi- I opened the project up to mess around with it a bit this morning. I embedded the get all tasks function into the updateBtn function and it seems to be refreshing the page when you stop the timer. It's not elegant, but appears to be working. Will update to my branch in github shortly...&#10;&#10;Fredy" />
     <option name="LAST_COMMIT_MESSAGE" value="Hi- I opened the project up to mess around with it a bit this morning. I embedded the get all tasks function into the updateBtn function and it seems to be refreshing the page when you stop the timer. It's not elegant, but appears to be working. Will update to my branch in github shortly...&#10;&#10;Fredy" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1607222208241">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607222208241" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1607222208240">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607222208240" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1607222208240">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607222208240" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1607222208240">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607222208240" />
   </component>
 </project>
