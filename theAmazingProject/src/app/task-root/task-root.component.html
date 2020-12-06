@@ -19,9 +19,9 @@
     <tr *ngFor=" let task of returnedTasks; let itemIndex = index" >
       <td >{{task.name}}</td>
       <td>{{task.projectId}}</td>
-      <td *ngIf="this.count === 0 else stringMsg">{{secondsToHms(task.totalTime)}}</td>
-      <ng-template #stringMsg><td *ngIf="this.count > 0 && changeText[itemIndex] === 'Start' else setTime ">{{secondsToHms(task.totalTime)}}</td></ng-template>
-      <ng-template #setTime><td>{{msg}}</td></ng-template>
+      <td *ngIf="this.count === 0 else setTime">{{secondsToHms(task.totalTime)}}</td>
+      <ng-template #setTime><td *ngIf="this.count > 0 && changeText[itemIndex] === 'Start' else stringMsg ">{{secondsToHms(task.totalTime)}}</td></ng-template>
+      <ng-template #stringMsg><td>{{msg}}</td></ng-template>
       <td>
         <input type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="buttonIsClickedChangeBackground(itemIndex,task._id);buttonIsClickedChangeText(itemIndex)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
