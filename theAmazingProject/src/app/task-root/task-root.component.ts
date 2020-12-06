@@ -18,6 +18,8 @@ export class TaskRootComponent implements OnInit {
   public returnedTasks;
   changeBackground = [];
   changeText = [];
+  msg = ['Timer is on!'];
+  count = 0;
 
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskItemService,
@@ -60,6 +62,7 @@ export class TaskRootComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   buttonIsClickedChangeBackground(index, taskIdActual) {
+    this.count++;
     if (this.changeBackground[index] === 'main3') {
       this.timerService.startTimer(taskIdActual);
       this.changeBackground[index] = 'main4';

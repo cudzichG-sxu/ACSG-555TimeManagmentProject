@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Hi- I opened the project up to mess around with it a bit this morning. I embedded the get all tasks function into the updateBtn function and it seems to be refreshing the page when you stop the timer. It's not elegant, but appears to be working. Will update to my branch in github shortly...&#10;&#10;Fredy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/theAmazingProject/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
