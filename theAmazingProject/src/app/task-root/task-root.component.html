@@ -17,11 +17,11 @@
     </thead>
     <tbody>
     <tr *ngFor=" let task of returnedTasks; let itemIndex = index" >
-      <td >{{task.name}}</td>
-      <td>{{task.projectId}}</td>
-      <td>{{secondsToHms((task.totalTime) + realTimeCounter)}}</td>
+      <td >{{this.task.name}}</td>
+      <td>{{this.task.projectId}}</td>
+      <td>{{secondsToHms((this.task.totalTime) + this.realTimeCounter)}}</td>
       <td>
-        <input type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="buttonIsClickedChangeBackground(itemIndex,task._id);buttonIsClickedChangeText(itemIndex)">
+        <input type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="this.buttonIsClickedChangeBackground(itemIndex,task._id);this.buttonIsClickedChangeText(itemIndex)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">
       </td>
     </tbody>
