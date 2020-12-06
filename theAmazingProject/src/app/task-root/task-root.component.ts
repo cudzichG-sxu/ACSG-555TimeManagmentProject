@@ -37,7 +37,7 @@ export class TaskRootComponent implements OnInit {
       returnedTasks.forEach(x => this.changeBackground.push('main3'));
       returnedTasks.forEach(x => this.changeText.push('Start'));
     });
-    this.simpleTimer.newTimer('1sec', 1, false);
+    this.simpleTimer.newTimer('1sec', 1, true);
   }
 
   saveTaskItem(): void {
@@ -91,8 +91,8 @@ export class TaskRootComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   secondsToHms(totalSeconds) {
-
-    totalSeconds = Number(totalSeconds) + this.realTimeCounter;
+    if (totalSeconds <= 0) { return '00:00:00'; }
+    totalSeconds = Number(totalSeconds);
     let h = Math.floor(totalSeconds / 3600);
     let m = Math.floor(totalSeconds % 3600 / 60);
     let s = Math.floor(totalSeconds % 3600 % 60);
