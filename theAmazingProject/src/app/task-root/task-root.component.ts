@@ -49,7 +49,9 @@ export class TaskRootComponent implements OnInit {
       this.returnedTasks.push(savedTaskItem);
       this.changeBackground.push('main3');
       this.changeText.push('Start');
-      // clears out text field on page for cleaner UI
+      this.realTimeCounter.push(0);
+      this.timerId.push(0); // add this line
+// clears out text field on page for cleaner UI
       this.newTaskItem = '';
     });
   }
