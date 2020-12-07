@@ -1,11 +1,10 @@
-
 <div class='card-header'>
-    <h1 class='main2'style="text-transform: uppercase" >{{projectName}}</h1>
-    <label for ='Task' >
-      <h3 class='main1'>Enter task for this project: </h3>
-    </label>
-    <input class='main1' type='text'id='Task' placeholder='Enter new task' [(ngModel)]="newTaskItem" (keyup.enter)="saveTaskItem()">
-    <input type="button" class='main3' value ='Save' (click)="saveTaskItem()" >
+  <h1 class='main2'style="text-transform: uppercase" >{{projectName}}</h1>
+  <label for ='Task' >
+    <h3 class='main1'>Enter task for this project: </h3>
+  </label>
+  <input class='main1' type='text'id='Task' placeholder='Enter new task' [(ngModel)]="newTaskItem" (keyup.enter)="saveTaskItem()">
+  <input type="button" class='main3' value ='Save' (click)="saveTaskItem()" >
 </div>
 <div  class = 'card-body'>
   <table class ='table table-hover'>
@@ -19,12 +18,7 @@
     <tr *ngFor=" let task of returnedTasks; let itemIndex = index" >
       <td >{{task.name}}</td>
       <td>{{task.projectId}}</td>
-<<<<<<< Updated upstream
       <td>{{secondsToHms((task.totalTime) + realTimeCounter[itemIndex])}}</td>
-=======
-      <td *ngIf="count % 2 === 0 else elseBlock">{{secondsToHms(task.totalTime)}}</td>
-      <ng-template #elseBlock><td>{{buttonIsClickedChangeText(itemIndex)}}</td></ng-template>
->>>>>>> Stashed changes
       <td>
         <input type="button" [value] ="changeText[itemIndex]" [class]="changeBackground[itemIndex]"  (click)="this.buttonIsClickedChangeBackground(itemIndex,task._id);this.buttonIsClickedChangeText(itemIndex)">
         <input type='button' value = 'delete' class='main4' (click)="deleteTask(task._id, itemIndex)">

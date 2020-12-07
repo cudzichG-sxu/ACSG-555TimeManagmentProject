@@ -17,7 +17,6 @@ export class TaskRootComponent implements OnInit {
   public projectId;
   public newTaskItem;
   public returnedTasks;
-<<<<<<< Updated upstream
   public realTimeCounter = [];
   private timerId = [];
   changeBackground = [];
@@ -25,13 +24,6 @@ export class TaskRootComponent implements OnInit {
   msg = ['Timer is on!'];
   count = 0;
 
-=======
-  msg = ['This timer is running!'];
-  count = 0;
-  changeBackground = ['main3'];
-  changeText = ['Start'];
-  totalSeconds = Number();
->>>>>>> Stashed changes
   constructor(private dataPkg: DataHandlerService,
               private taskService: TaskItemService,
               private timerService: TimerActualService,
@@ -57,7 +49,9 @@ export class TaskRootComponent implements OnInit {
       this.returnedTasks.push(savedTaskItem);
       this.changeBackground.push('main3');
       this.changeText.push('Start');
-      // clears out text field on page for cleaner UI
+      this.realTimeCounter.push(0);
+      this.timerId.push(0); // add this line
+// clears out text field on page for cleaner UI
       this.newTaskItem = '';
     });
   }
@@ -80,27 +74,13 @@ export class TaskRootComponent implements OnInit {
     this.count++;
     if (this.changeBackground[index] === 'main3') {
       this.timerService.startTimer(taskIdActual);
-<<<<<<< Updated upstream
       this.changeBackground[index] = 'main4';
       this.timerId[index] = this.simpleTimer.subscribe('1sec', () => this.realTimeCounter[index]++);
-=======
->>>>>>> Stashed changes
     } else {
       this.timerService.stopTimer(taskIdActual);
       this.taskService.getAllTasks(this.projectId).subscribe(returnedTasks => {
         this.returnedTasks = returnedTasks;
       });
-<<<<<<< Updated upstream
-=======
-    }
-  }
-
-  // tslint:disable-next-line:typedef
-  buttonIsClickedChangeBackground(index) {
-    if (this.changeBackground[index] === 'main3') {
-      this.changeBackground[index] = 'main4';
-    } else {
->>>>>>> Stashed changes
       this.changeBackground[index] = 'main3';
       this.simpleTimer.unsubscribe(this.timerId[index]);
       this.timerId[index] = 0;
@@ -112,7 +92,6 @@ export class TaskRootComponent implements OnInit {
   buttonIsClickedChangeText(index) {
     if (this.changeText[index] === 'Start') {
       this.changeText[index] = 'Stop';
-      return this.msg[index];
     } else {
       this.changeText[index] = 'Start';
     }
