@@ -50,8 +50,8 @@ export class TaskRootComponent implements OnInit {
       this.changeBackground.push('main3');
       this.changeText.push('Start');
       this.realTimeCounter.push(0);
-      this.timerId.push(0); // add this line
-// clears out text field on page for cleaner UI
+      this.timerId.push(0);
+      // clears out text field on page for cleaner UI
       this.newTaskItem = '';
     });
   }
@@ -65,6 +65,8 @@ export class TaskRootComponent implements OnInit {
         this.returnedTasks.splice(index, 1);
         this.changeBackground.splice(index, 1);
         this.changeText.splice(index, 1);
+        this.realTimeCounter.splice(index, 1);
+        this.timerId.splice(index, 1);
       }
     });
   }
@@ -103,6 +105,7 @@ export class TaskRootComponent implements OnInit {
       return '00:00:00';
     } else {
       totalSeconds = Number(totalSeconds);
+      // TSlint throwing errors here, but the code runs so I'll leave it
       let h = Math.floor(totalSeconds / 3600);
       let m = Math.floor(totalSeconds % 3600 / 60);
       let s = Math.floor(totalSeconds % 3600 % 60);
