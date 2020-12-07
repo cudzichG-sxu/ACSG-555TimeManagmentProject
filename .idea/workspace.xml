@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="I made a few more updates in the html.">
+    <list default="true" id="564695b5-5cd3-4102-9866-dbf7e42c9b78" name="Default Changelist" comment="Implemented a timer that is in real time. Needs some polish, Greg please look.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/theAmazingProject/src/app/task-root/task-root.component.html" afterDir="false" />
     </list>
@@ -50,7 +50,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\fredy\Documents\GitHub\theAmazingProject\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\ryo36\Desktop\Angular Stuff\ACSG-542TimeManagmentProject\theAmazingProject\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -80,6 +80,7 @@
       <workItem from="1606871347464" duration="40968000" />
       <workItem from="1607183718468" duration="2707000" />
       <workItem from="1607187594525" duration="5763000" />
+      <workItem from="1607222568050" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="Hi Guys- I made updates to the home page banner">
       <created>1606591370741</created>
@@ -137,14 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607195219578</updated>
     </task>
-    <task id="LOCAL-00009" summary="I made a few more updates in the html.">
-      <created>1607229555246</created>
+    <task id="LOCAL-00009" summary="Implemented a timer that is in real time. Needs some polish, Greg please look.">
+      <created>1607222499178</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1607229555246</updated>
+      <updated>1607222499178</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implemented a timer that is in real time. Needs some polish, Greg please look.">
+      <created>1607222977458</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607222977458</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +176,29 @@
     <MESSAGE value="Okay, I think i completed the HTML setup for the task-root component. I think all we technically need is the timer working. I would say this is 90% complete." />
     <MESSAGE value="Guys- I added a function to toggle the button between start and stop. I think it is working properly. I would ask that you double check the code." />
     <MESSAGE value="Hi- I opened the project up to mess around with it a bit this morning. I embedded the get all tasks function into the updateBtn function and it seems to be refreshing the page when you stop the timer. It's not elegant, but appears to be working. Will update to my branch in github shortly...&#10;&#10;Fredy" />
-    <MESSAGE value="I made a few more updates in the html." />
-    <option name="LAST_COMMIT_MESSAGE" value="I made a few more updates in the html." />
+    <MESSAGE value="Implemented a timer that is in real time. Needs some polish, Greg please look." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented a timer that is in real time. Needs some polish, Greg please look." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1607223073523">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607223073523" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1607223073523">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607223073523" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1607223073523">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607223073523" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1607223073523">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607223073523" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1607222980047">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607222980047" />
   </component>
 </project>
