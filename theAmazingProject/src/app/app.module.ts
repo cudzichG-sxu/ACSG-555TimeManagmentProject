@@ -8,7 +8,6 @@ import { TaskRootComponent } from './task-root/task-root.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { FormsModule } from '@angular/forms';
-import { SimpleTimer } from 'ng2-simple-timer';
 
 
 
@@ -29,7 +28,7 @@ const config: SocketIoConfig = { url: 'http://localhost:8001', options: {} };
     SocketIoModule.forRoot(config),
     FormsModule
   ],
-  providers: [SimpleTimer],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
